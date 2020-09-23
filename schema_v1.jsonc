@@ -1,0 +1,33 @@
+{
+    // The wumpus protocol version (right now it is version 1)
+    "version": "1",
+    // The issuer bot's client ID
+    "issuer_id": "443032696491343872",
+    // The "worker" or "the otehr bot" client ID
+    "worker_id": "234395307759108106",
+    // The randomly generated ID from the issuer to identify this specify request
+    //"request_id": "fi7nRXtqPS7vxQ==",
+    // The response ID is defined by the issuer bot, and the "worker" bot will use this very ID to give and return the processed data back to the issuer bot
+    "response_id": "mi4+zyN4CsBuQA==",
+    // The "action" or "event" that the issuer want to perform by the other bot
+    // The "action" is defined and documented by the other bot
+    "action": "event.music.play",
+    // The tell the worker bot that if the following "data" field is encrypted or not
+    "encryption": {
+        "enabled": false,
+        // Letting the worker bot to know which of the encryption algorithm is beign used to encrypt the data payload
+        // The no encryption is being use to encryped the data payload, the "algo" field must be specify as a boolean flag as "false"
+        "algo": "AES256"
+    },
+    // A JSON object that contains other command-related information that will be utilized by the other bot
+    "data": {
+        // A completed customizable area there the bots develoeprd can be fully utilized
+    },
+    // In case of any sort of error occurs, the "error" fields will be used
+    "errors": [
+        {
+            "message": "Invalid entry for username",
+            "code": "field.invalid"
+        }
+    ]
+}
